@@ -5,7 +5,7 @@ from .geo import haversine, meters_per_degree
 
 
 class Track:
-    def __init__(self, waypoints, closed=True, corner_radius_m=6.0, corner_segments=25):
+    def __init__(self, waypoints, closed=True, corner_radius_m=6.0, corner_segments=24):
         pts = [(float(p[0]), float(p[1])) for p in waypoints]
         if len(pts) < 2:
             raise ValueError("至少需要 2 个顶点")
